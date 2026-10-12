@@ -5,12 +5,12 @@
   const startEntry = () => {
     if (preference.matches || !('animate' in Element.prototype)) return;
     const candidates = Array.from(document.querySelectorAll<HTMLElement>([
-      'main h1', 'main h2', 'main h3', 'main p', 'main figure',
+      'main h1', 'main h2', 'main h3', 'main p', 'main figure', 'main dl',
       'main .hero-actions > a', 'main .page-intro > .button', 'main .breadcrumb',
       'main .hero-note', 'main .number', 'main .round-link', 'main .step-number',
       'main .article-card-meta', 'main .text-link', 'main form label',
       'main form > .button', 'main aside > a', 'main summary',
-      'main .journal-filters > button',
+      'main .journal-filters button', 'main fieldset legend',
     ].join(',')));
     const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 0;
     const visible = candidates.filter(element => {
@@ -21,11 +21,11 @@
     const ordered = visible.filter(element => !visible.some(parent => parent !== element && parent.contains(element)))
       .map(element => ({ element, rect: element.getBoundingClientRect() }))
       .sort((a, b) => Math.abs(a.rect.top - b.rect.top) > 8 ? a.rect.top - b.rect.top : a.rect.left - b.rect.left);
-    const interval = ordered.length > 1 ? Math.min(140, 1200 / (ordered.length - 1)) : 0;
+    const interval = ordered.length > 1 ? Math.min(65, 450 / (ordered.length - 1)) : 0;
     ordered.forEach(({ element }, index) => {
       if (element.contains(document.activeElement)) return;
       const animation = element.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 900, delay: index * interval, easing: 'cubic-bezier(.25,.1,.25,1)', fill: 'backwards',
+        duration: 450, delay: index * interval, easing: 'cubic-bezier(.25,.1,.25,1)', fill: 'backwards',
       });
       entryAnimations.add(animation);
       animation.finished.then(() => entryAnimations.delete(animation)).catch(() => entryAnimations.delete(animation));
@@ -36,7 +36,7 @@
     '.service-grid', '.approach-grid', '.process-grid', '.area-inner',
     '.faq-section', '.contact-cta-inner', '.portfolio-grid',
     '.process-detail > article', '.area-cards', '.contact-grid',
-    '.legal-copy', '.journal-feature', '.journal-library .resource-grid',
+    '.legal-copy', '.journal-feature', '.journal-library .resource-grid', '.project-story', '.team-section',
     '.home-journal .resource-grid', '.article-layout', '.related-guides .resource-grid',
   ].join(','));
   let observer: IntersectionObserver | undefined;

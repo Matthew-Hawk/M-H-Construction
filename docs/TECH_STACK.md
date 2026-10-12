@@ -4,7 +4,7 @@
 
 - **Astro 7.3.8:** shared components and layouts compiled into static HTML pages. Production does not require a running Node server for these pages.
 - **TypeScript 6.0.3:** checks the centralized business/service data, article metadata, and small browser scripts.
-- **Semantic HTML and custom CSS:** responsive design, navy/ivory design tokens, system-font typography, menus, FAQ, and forms. No Tailwind, React, or large component framework.
+- **Semantic HTML and custom CSS:** responsive design, navy/ivory design tokens, system-font typography, menus, FAQ, and forms. `src/styles/design.css` supplies the current editorial, project-story, portrait-placeholder, and contact-layout refinements. Native radio inputs and a details disclosure simplify the inquiry form. No Tailwind, React, or large component framework.
 - **Native browser JavaScript:** menu, inquiry draft preparation, journal filters, and scroll progress. No tracking or browser persistence.
 - **Motion:** Native Web Animations API sequences individual visible content elements from top to bottom on page entry and fades the mobile menu. IntersectionObserver and CSS opacity transitions retain grouped fades when scrolling. CSS supplies color feedback and FAQ expansion where supported. Entrances use no movement or zoom. Reduced-motion support is built in, and keyboard-focused content appears immediately.
 

@@ -65,3 +65,11 @@ Updated: October 11, 2026
 - Before branded homepage implementation: inspect authentic project photos and agree to the short build scope.
 - Before enabling inquiries: select and configure backend, confirm destination and data practices, and test delivery/failure handling.
 - Before production: confirm hosting, backup/recovery, current URL inventory and redirects, approved copy/photos, and explicit launch authorization.
+
+## Approved design refinement
+
+Owner authorized the evidence-informed design recommendations: larger small text; descriptive headings; tighter spacing; project-story and portrait layouts using labeled placeholders; a simpler contact layout with radios and collapsible optional fields; faster initial fades while retaining the approved scroll fades. Implemented locally for review. Actual team/project photos, verified project narratives, production form delivery and hosting remain separate pending work.
+
+## GitHub save preference
+
+Owner authorizes committing and pushing all completed future project changes to Matthew-Hawk/M-H-Construction after appropriate verification. Ask only when a blocker or material decision requires owner input. Current branch is main. A GitHub push may trigger owner-configured hosting automation; no separate hosting or DNS changes are implied by this preference.

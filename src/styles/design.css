@@ -1,0 +1,133 @@
+/* Layout refinements shared by the design preview. */
+.hero-description{max-width:440px}
+.hero-actions .text-link{font-size:14px}
+.home-project{border-top:1px solid var(--line);padding-top:24px}
+.project-stories{padding-bottom:80px}
+.project-story{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;scroll-margin-top:140px}
+.project-story + .project-story{margin-top:72px;padding-top:72px;border-top:1px solid var(--line)}
+.project-main-image img{width:100%;height:390px;object-fit:cover}
+.project-details-images{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.project-detail-image{height:185px}
+.project-detail-image img{width:200%;max-width:none;height:100%;object-fit:cover;position:relative}
+.detail-left img{left:0;object-position:left center}
+.detail-right img{left:-100%;object-position:right center}
+.project-story-copy h2{font-size:clamp(34px,3.3vw,48px);margin-bottom:24px}
+.project-story-copy .eyebrow{font-size:11px}
+.project-story-copy p{font-size:16px}
+.project-story-facts{margin:26px 0}
+.project-story-facts>div{border-top:1px solid var(--line);padding:17px 0}
+.project-story-facts dt{font-size:12px;color:var(--warm-ink);letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:7px}
+.project-story-facts dd{margin:0;font-size:16px;color:var(--muted)}
+.project-story-copy .project-preview-note{font-size:13px;border-left:2px solid var(--warm-ink);padding-left:14px}
+.project-story-compact{grid-template-columns:1.3fr 1fr;gap:44px}
+.project-story-compact .project-visuals{display:grid;grid-template-columns:1.7fr 1fr;gap:16px}
+.project-story-compact .project-details-images{display:block;margin:0}
+.project-story-compact .project-main-image img,.project-story-compact .project-detail-image{height:380px}
+.project-story-compact .project-main-image img{object-position:46% center}
+.team-section{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:center}
+.team-portrait-placeholder{min-height:430px;padding:38px;background:var(--sand);border:1px solid var(--stone);display:flex;flex-direction:column;justify-content:space-between;gap:70px}
+.team-portrait-placeholder img{width:230px;max-width:100%}
+.team-portrait-placeholder figcaption{display:flex;flex-direction:column}
+.team-portrait-placeholder .eyebrow{font-size:11px;margin-bottom:15px}
+.team-portrait-placeholder figcaption>span:not(.eyebrow){font-family:var(--display-font);font-size:36px;line-height:1.2;letter-spacing:-.025em}
+.team-portrait-placeholder small{font-size:13px;color:var(--muted);margin-top:24px}
+.team-introduction h2{font-size:clamp(35px,3.2vw,46px);margin-bottom:26px}
+.contact-intro{padding-top:36px;padding-bottom:28px}
+.contact-intro h1{font-size:clamp(40px,4.5vw,64px);margin-bottom:18px}
+.contact-intro .intro-text{margin-bottom:0}
+.contact-grid{gap:56px}
+.contact-grid aside .eyebrow{margin-bottom:12px}
+.contact-grid aside hr{margin-block:24px}
+.contact-note{margin-top:16px}
+.form-intro{font-size:14px;margin-bottom:24px}
+.form-section-title{font-family:var(--body-font);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--warm-ink);margin-bottom:18px}
+.project-type{padding:0;margin:0 0 20px;border:0;min-width:0}
+.project-type legend{font-size:14px;font-weight:600;margin-bottom:10px}
+.project-type legend span{font-size:12px;font-weight:400;color:var(--muted)}
+.project-type-options{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.project-type label{position:relative;margin:0}
+.project-type input{position:absolute;width:1px;height:1px;min-height:0;opacity:0;margin:0;padding:0}
+.project-type label>span{min-height:48px;display:flex;align-items:center;justify-content:center;border:1px solid #b9b3a7;background:#faf8f3;color:var(--navy);font-size:14px;padding:9px}
+.project-type input:checked+span{background:var(--navy);color:white;border-color:var(--navy)}
+.project-type input:focus-visible+span{outline:3px solid #9c6c26;outline-offset:3px}
+.project-type input[aria-invalid='true']+span{border-color:#ad322b;outline:1px solid #ad322b}
+.planning-details{border-top:1px solid #cfc6b8;border-bottom:1px solid #cfc6b8;margin:22px 0}
+.planning-details summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;font-size:14px;font-weight:600;padding:12px 0}
+.planning-details summary::-webkit-details-marker{display:none}
+.planning-details summary::after{content:'+';font-size:24px;font-weight:400}
+.planning-details[open] summary::after{content:'−'}
+.planning-details-content{padding-top:12px}
+.planning-details .field-help{margin:0 0 18px}
+.field-help{font-size:13px}
+label>span{font-size:12px}
+.journal-heading{padding-block:36px 28px}
+.journal-heading h1{font-size:clamp(40px,4.1vw,60px);margin-bottom:18px}
+.journal-heading .intro-text{max-width:760px;font-size:17px;line-height:1.65;margin-bottom:14px}
+.journal-heading .editorial-note{font-size:12px;margin:0 0 20px}
+.journal-discovery .journal-filters{margin-bottom:10px}
+.journal-discovery .guide-count{margin-bottom:0;font-size:13px}
+.journal-feature .concept-image img{min-height:330px;height:330px}
+.journal-feature-copy{padding:32px}
+.journal-feature h2{font-size:34px;margin-bottom:16px}
+.journal-feature-copy .eyebrow{margin-bottom:14px}
+.journal-library{padding-top:48px}
+.journal-filters button{font-size:14px}
+.article-card-meta .eyebrow{font-size:11px}
+.article-card-meta>span:last-child{font-size:12px}
+.article-content p,.article-content li{font-size:17px}
+@media(max-width:1120px){
+  .hero-actions .text-link{font-size:14px}
+  .project-story,.project-story-compact{gap:30px}
+  .project-story-compact .project-visuals{grid-template-columns:1fr}
+  .project-story-compact .project-details-images{display:none}
+  .team-section{gap:40px}
+}
+@media(max-width:720px){
+  .hero{padding-top:24px}
+  .hero-copy{padding-bottom:24px}
+  .hero h1{margin-bottom:20px}
+  .hero-description{margin-bottom:20px}
+  .hero-image img{height:280px}
+  #services.section{padding-top:40px}
+  .hero-copy .eyebrow{font-size:11px;letter-spacing:.08em}
+  .hero-actions{gap:10px 16px}
+  .hero-actions .button{font-size:14px;gap:12px}
+  .hero-note span:first-child{font-size:11px}
+  .hero-note{bottom:58px}
+  .principles{font-size:11px;gap:7px 14px;padding-block:16px}
+  .principles span{gap:6px}
+  .section-heading h2{font-size:36px;margin-bottom:16px}
+  .approach-title h2{font-size:40px}
+  .home-project{padding-top:24px}
+  .project-story,.project-story-compact,.team-section{grid-template-columns:1fr;gap:28px}
+  .project-story + .project-story{margin-top:44px;padding-top:44px}
+  .project-main-image img{height:300px}
+  .project-detail-image{height:160px}
+  .project-story-copy h2{font-size:35px}
+  .project-stories{padding-bottom:48px}
+  .project-story-compact .project-main-image img{height:300px}
+  .team-portrait-placeholder{min-height:340px;padding:28px;gap:55px}
+  .team-portrait-placeholder figcaption>span:not(.eyebrow){font-size:32px}
+  .team-introduction h2{font-size:35px}
+  .contact-intro{padding-block:24px}
+  .contact-intro h1{font-size:40px;margin-bottom:14px}
+  .contact-intro .eyebrow{margin-top:0;margin-bottom:14px}
+  .contact-intro .intro-text{font-size:16px;line-height:1.6}
+  .contact-grid{gap:24px}
+  .contact-grid aside{padding:0}
+  .contact-phone{font-size:30px;margin-bottom:5px}
+  .contact-email{font-size:14px;min-height:32px;display:inline-flex;align-items:center}
+  .contact-grid aside .contact-service-area{font-size:14px;margin:12px 0 0}
+  .contact-note{font-size:14px;margin:6px 0 0}
+  .contact-grid aside .eyebrow{margin-bottom:8px}
+  form{padding:24px 20px}
+  .form-intro{font-size:14px;margin-bottom:20px}
+  .project-type-options{gap:8px}
+  .journal-heading{padding-block:24px}
+  .journal-heading h1{font-size:40px}
+  .journal-heading .eyebrow{margin-top:0}
+  .journal-feature .concept-image img{height:250px;min-height:0}
+  .journal-feature-copy{padding:26px 24px}
+  .journal-feature h2{font-size:32px}
+  .journal-filters button{font-size:14px;padding-inline:12px}
+}

@@ -42,3 +42,15 @@ Screenshot: `qa/homepage-desktop.jpg` (local, ignored development artifact).
 - Browser navigation to About captured the top eyebrow at opacity 0.014 while the lower heading and description remained at opacity 0; all three had transform `none`. The bootstrap mask was already released and below-viewport scroll preparation was still active.
 - Reduced-motion changes finish initial animations and reveal prepared groups. Keyboard focus completes an element's entry animation; pagehide finishes the sequence for history restoration.
 - Astro diagnostics: 21 files with zero errors/warnings/hints. All 14 pages build successfully.
+
+## Design refinement after hosted-preview review
+
+- Larger typography: 16–17px body and inputs, 14px navigation/buttons, 11–12px editorial labels. Palette retained.
+- Clearer homepage/service headings, tighter section spacing, compact Journal introduction, and category controls above the featured guide.
+- ProjectStory component adds concept goals, design details, a main photo and cropped concept details. Homepage includes a compact featured concept. About includes an explicitly labeled team-portrait placeholder.
+- Contact has native Kitchen/Bathroom/Both radios and optional planning fields in a native details disclosure. Query-string selection, required-field errors, missing reply-method errors, and invalid email were verified. Optional details expand correctly. No inquiry sent.
+- Initial opacity animations are 450ms with at most 65ms between starts and a 450ms maximum start delay. Approved 900ms grouped scroll fades remain.
+- Astro diagnostics: 23 files, zero errors, warnings, or hints. Static build: 14 routes. Built links/assets/fragments, unique IDs and one H1 per page passed.
+- Browser checks: desktop 1440px, header breakpoint 1121px, mobile 390px, and narrow 320px. No horizontal overflow on Home, About, Our Work, Journal, an article, or Contact at 320px. Menu Escape restores focus; Journal Bathroom filter shows one guide.
+- At 390×844, contact form starts around 581px (previously 899px); homepage services heading around 1005px (previously 1048px). At 1440×900, Journal library starts around 933px (previously 1110px). Measurements include the design-preview banner and browser scrollbar.
+- Screenshots: qa/design-portfolio-desktop.png and qa/design-about-desktop.png. Changes are local; hosted Cloudflare preview has not been redeployed.

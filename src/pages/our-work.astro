@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ConceptImage from '../components/ConceptImage.astro';
+import ProjectStory from '../components/ProjectStory.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import { services } from '../data/site';
 ---
 <BaseLayout title="Our Work — Portfolio Preview" description="The M&H portfolio is being prepared. This design preview uses clearly labeled generated concepts, not completed M&H projects.">
-  <section class="container page-intro"><p class="eyebrow">OUR WORK · PORTFOLIO IN PREPARATION</p><h1>Real homes.<br /><em>Personal transformations.</em></h1><p class="intro-text">Our project gallery is being prepared. For now, these generated images show the visual direction of the website. They are not completed M&amp;H projects.</p></section>
-  <section class="container portfolio-grid">{services.map(service => <article><ConceptImage src={service.image} alt={service.alt} /><p class="eyebrow">ILLUSTRATIVE DESIGN CONCEPT</p><h2>{service.short === 'Kitchens' ? 'Warmth at the heart of home.' : 'A quiet place to begin.'}</h2><p>AI-generated placeholder for the {service.short.toLowerCase()} gallery. Authentic project photography and descriptions will replace this before launch.</p></article>)}</section>
+  <section class="container page-intro"><p class="eyebrow">OUR WORK · PORTFOLIO IN PREPARATION</p><h1>Spaces with a story.<br /><em>Details with a purpose.</em></h1><p class="intro-text">Explore the layout for our future project stories. These generated concepts illustrate the website’s visual direction; they are not completed M&amp;H projects.</p></section>
+  <section class="container project-stories" aria-label="Illustrative kitchen and bathroom concepts">{services.map(service => <ProjectStory service={service} />)}</section>
   <ContactCTA />
 </BaseLayout>
