@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import { process } from '../data/site';
+---
+<BaseLayout title="Our Remodeling Process" description="Begin with your ideas, discuss the right scope, and plan your kitchen or bathroom remodel with M&H Construction in Brazos County.">
+  <section class="container page-intro"><p class="eyebrow">OUR PROCESS</p><h1>A thoughtful beginning.<br /><em>A space that feels like you.</em></h1><p class="intro-text">A simple overview of how a remodeling conversation can move forward. The details, design assistance, and timeline are tailored to your project.</p></section>
+  <section class="container process-detail">{process.map((step, index) => <article><span class="step-number">0{index + 1}</span><div><h2>{step.title}</h2><p>{step.text}</p><p>{index === 0 ? 'Share the general location, what you want to remodel, and any ideas or questions. An approximate budget and timeline are helpful if you have them, but you can begin without either.' : index === 1 ? 'Bring existing plans or discuss the help you need developing your ideas. Project scope, selections, specialist work, and expectations should be agreed before construction starts.' : 'Preparation and construction follow the agreed project scope. The final walkthrough is an opportunity to review the finished space together.'}</p></div></article>)}</section>
+  <ContactCTA />
+</BaseLayout>

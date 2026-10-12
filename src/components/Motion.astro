@@ -1,0 +1,96 @@
+<script>
+  const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const entryAnimations = new Set<Animation>();
+  const finishEntry = () => { entryAnimations.forEach(animation => animation.finish()); entryAnimations.clear(); };
+  const startEntry = () => {
+    if (preference.matches || !('animate' in Element.prototype)) return;
+    const candidates = Array.from(document.querySelectorAll<HTMLElement>([
+      'main h1', 'main h2', 'main h3', 'main p', 'main figure',
+      'main .hero-actions > a', 'main .page-intro > .button', 'main .breadcrumb',
+      'main .hero-note', 'main .number', 'main .round-link', 'main .step-number',
+      'main .article-card-meta', 'main .text-link', 'main form label',
+      'main form > .button', 'main aside > a', 'main summary',
+      'main .journal-filters > button',
+    ].join(',')));
+    const headerBottom = document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 0;
+    const visible = candidates.filter(element => {
+      const rect = element.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0 && rect.bottom > headerBottom && rect.top < window.innerHeight;
+    });
+    // Avoid fading a child twice when its parent is already part of the sequence.
+    const ordered = visible.filter(element => !visible.some(parent => parent !== element && parent.contains(element)))
+      .map(element => ({ element, rect: element.getBoundingClientRect() }))
+      .sort((a, b) => Math.abs(a.rect.top - b.rect.top) > 8 ? a.rect.top - b.rect.top : a.rect.left - b.rect.left);
+    const interval = ordered.length > 1 ? Math.min(140, 1200 / (ordered.length - 1)) : 0;
+    ordered.forEach(({ element }, index) => {
+      if (element.contains(document.activeElement)) return;
+      const animation = element.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 900, delay: index * interval, easing: 'cubic-bezier(.25,.1,.25,1)', fill: 'backwards',
+      });
+      entryAnimations.add(animation);
+      animation.finished.then(() => entryAnimations.delete(animation)).catch(() => entryAnimations.delete(animation));
+    });
+  };
+  const targets = document.querySelectorAll<HTMLElement>([
+    '.hero-copy', '.hero-image-wrap', '.page-intro', '.section-heading',
+    '.service-grid', '.approach-grid', '.process-grid', '.area-inner',
+    '.faq-section', '.contact-cta-inner', '.portfolio-grid',
+    '.process-detail > article', '.area-cards', '.contact-grid',
+    '.legal-copy', '.journal-feature', '.journal-library .resource-grid',
+    '.home-journal .resource-grid', '.article-layout', '.related-guides .resource-grid',
+  ].join(','));
+  let observer: IntersectionObserver | undefined;
+  const seen = new WeakSet<Element>();
+  const reveal = (element: HTMLElement) => {
+    seen.add(element);
+    element.classList.remove('fade-pending');
+    observer?.unobserve(element);
+  };
+  const startReveals = () => {
+    observer?.disconnect();
+    if (preference.matches || !('IntersectionObserver' in window)) {
+      targets.forEach(target => target.classList.remove('fade-pending'));
+      return;
+    }
+    observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) reveal(entry.target as HTMLElement); });
+    }, { threshold: 0, rootMargin: '0px 0px -12px 0px' });
+    targets.forEach(target => {
+      if (seen.has(target)) return;
+      // Only prepare content below the viewport. Visible content never flashes away.
+      if (target.getBoundingClientRect().top < window.innerHeight || target.contains(document.activeElement)) {
+        reveal(target);
+        return;
+      }
+      target.classList.add('fade-target', 'fade-pending');
+      observer?.observe(target);
+    });
+  };
+  startReveals();
+  try { startEntry(); } finally { document.documentElement.classList.remove('page-enter-pending'); }
+  preference.addEventListener('change', () => { finishEntry(); startReveals(); });
+  window.addEventListener('pagehide', finishEntry);
+  // Make keyboard-focused content immediately visible.
+  document.addEventListener('focusin', event => {
+    if (!(event.target instanceof Element)) return;
+    entryAnimations.forEach(animation => {
+      const element = (animation.effect as KeyframeEffect | null)?.target;
+      if (element instanceof Element && element.contains(event.target as Element)) animation.finish();
+    });
+    const target = event.target.closest<HTMLElement>('.fade-target');
+    if (target) { target.classList.add('fade-focus'); reveal(target); }
+  });
+  const header = document.querySelector('.site-header');
+  const progress = document.querySelector<HTMLElement>('.scroll-progress span');
+  let scheduled = false;
+  const updateScroll = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 24);
+    const range = document.documentElement.scrollHeight - window.innerHeight;
+    if (progress) progress.style.transform = `scaleX(${range > 0 ? Math.min(1, Math.max(0, window.scrollY / range)) : 0})`;
+    scheduled = false;
+  };
+  window.addEventListener('scroll', () => { if (!scheduled) { scheduled = true; requestAnimationFrame(updateScroll); } }, { passive: true });
+  window.addEventListener('resize', updateScroll);
+  document.addEventListener('toggle', updateScroll, true);
+  updateScroll();
+</script>

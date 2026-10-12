@@ -1,0 +1,4 @@
+---
+const { direction = 'right' } = Astro.props;
+---
+<svg class="arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={direction === 'down' ? 'transform:rotate(90deg)' : undefined}><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.5" /></svg>

@@ -1,0 +1,28 @@
+/* Initial viewport elements sequence by position; scroll entrances stay grouped. */
+.page-enter-pending main{opacity:0;animation:entry-fallback 1ms 1800ms forwards}
+/* Recover readable content even if the enhancement script fails to load. */
+@keyframes entry-fallback{to{opacity:1}}
+.fade-target{opacity:1;transition:opacity 900ms cubic-bezier(.25,.1,.25,1);animation:none!important}
+.fade-target.fade-pending{opacity:0}
+.fade-focus{transition:none!important}
+.site-header{position:sticky;top:0;z-index:30;transition:box-shadow .3s ease,background .3s ease}
+.site-header.is-scrolled{box-shadow:0 8px 24px #000a2709;background:#f7f4edf5}
+.scroll-progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:70;pointer-events:none}
+.scroll-progress span{display:block;height:100%;background:#b7986b;transform:scaleX(0);transform-origin:left center}
+.site-header nav>a:not(.button),.site-footer a{transition:color .2s ease}
+.round-link{transition:background .25s ease,color .25s ease}
+.menu-toggle svg{transition:rotate .25s ease}
+.menu-toggle[aria-expanded='true'] svg{rotate:90deg}
+.faq-list{interpolate-size:allow-keywords}
+.faq-list summary span{transition:transform .25s ease}
+@supports selector(details::details-content){
+  .faq-list details::details-content{block-size:0;overflow:clip;transition:block-size .25s ease,content-visibility .25s;transition-behavior:allow-discrete}
+  .faq-list details[open]::details-content{block-size:auto}
+}
+input,select,textarea{transition:border-color .2s ease,background .2s ease}
+input:focus,select:focus,textarea:focus{background:#fffdf8;border-color:var(--navy)}
+@media(prefers-reduced-motion:reduce){
+  .scroll-progress{display:none}
+  .fade-target.fade-pending{opacity:1}
+  .page-enter-pending main{opacity:1;animation:none}
+}

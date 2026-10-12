@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ConceptImage from '../../components/ConceptImage.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { articles } from '../../data/journal';
+import { services } from '../../data/site';
+export function getStaticPaths() { return articles.map(article => ({ params: { slug: article.slug }, props: { article } })); }
+const { article } = Astro.props;
+const { Content, frontmatter, minutes } = article;
+const headings = article.getHeadings().filter(heading => heading.depth === 2);
+const image = services[frontmatter.image === 'kitchen' ? 0 : 1];
+const related = articles.filter(other => other.slug !== article.slug).slice(0, 2);
+---
+<BaseLayout title={frontmatter.title} description={frontmatter.description}>
+  <header class="container page-intro article-header"><a class="breadcrumb" href="/resources/">← Back to the Journal</a><p class="eyebrow">{frontmatter.category} · {minutes} MIN READ</p><h1>{frontmatter.title}</h1><p class="intro-text">{frontmatter.description}</p><p class="article-byline">Homeowner guide · Prepared October 11, 2026</p><p class="editorial-note">Preview article · Awaiting M&amp;H content review</p></header>
+  <div class="container"><ConceptImage src={image.image} alt={image.alt} class="article-image" eager /></div>
+  <div class="container article-layout"><aside class="article-toc"><p class="eyebrow">IN THIS GUIDE</p><nav aria-label="Article contents">{headings.map(heading => <a href={`#${heading.slug}`}>{heading.text}</a>)}</nav><a class="article-contact" href="/contact/">Have a project in mind? <span aria-hidden="true">↗</span></a></aside><article class="article-content"><div class="article-takeaway"><p class="eyebrow">THE STARTING POINT</p><p>{frontmatter.takeaway}</p></div><Content /></article></div>
+  <section class="container section related-guides"><div class="section-heading"><div><p class="eyebrow">KEEP EXPLORING</p><h2>A little more clarity.</h2></div><a class="text-link" href="/resources/">All Guides <span aria-hidden="true">↗</span></a></div><div class="resource-grid">{related.map(other => <ArticleCard article={other} />)}</div></section>
+  <ContactCTA />
+</BaseLayout>

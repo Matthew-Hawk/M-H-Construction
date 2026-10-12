@@ -1,0 +1,10 @@
+---
+import Arrow from './Arrow.astro';
+import { business } from '../data/site';
+---
+<section class="contact-cta">
+  <div class="container contact-cta-inner">
+    <div><p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p><h2>Let’s make room<br />for your vision.</h2></div>
+    <div><p>A new kitchen. A more comfortable bathroom.<br class="desktop-only" /> A home that feels more like you.</p><a class="button button-light" href="/contact/">Discuss Your Project <Arrow /></a><a class="cta-phone" href={business.phoneHref}>{business.phone}</a></div>
+  </div>
+</section>

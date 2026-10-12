@@ -1,0 +1,12 @@
+---
+import Arrow from './Arrow.astro';
+import type { articles } from '../data/journal';
+interface Props { article: typeof articles[number]; }
+const { article } = Astro.props;
+---
+<article class="resource-card" data-category={article.frontmatter.category}>
+  <div class="article-card-meta"><span class="eyebrow">{article.frontmatter.category}</span><span>{article.minutes} min read</span></div>
+  <h3><a href={`/resources/${article.slug}/`}>{article.frontmatter.title}</a></h3>
+  <p>{article.frontmatter.description}</p>
+  <a class="text-link" href={`/resources/${article.slug}/`}>Read the Guide <Arrow /></a>
+</article>
