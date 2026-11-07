@@ -62,3 +62,9 @@ Screenshot: `qa/homepage-desktop.jpg` (local, ignored development artifact).
 - Replaced generated-image captions, banner wording, and portfolio descriptions with accurate photography labels. Category selections do not imply one project or a before/after pairing.
 - Astro diagnostics: 25 files, zero errors, warnings, or hints. Static build: 14 routes. Built links, assets, fragments, unique IDs, and H1 counts passed.
 - Browser preview could not connect to the local server from the browser tool; visual browser QA was unavailable. Source photography and contact sheets were inspected directly.
+
+## Owner-edited photographs — November 7, 2026
+
+- Replaced every kitchen and bathroom photograph with the six supplied images from Edited_Kitchen and Edited_Bathroom. Updated descriptive text to match the new photographs.
+- All six interior/exterior image files and their gallery selections remain unchanged. Source originals remain untouched.
+- Astro diagnostics: zero errors, warnings, or hints. All 14 routes build and pass local links/assets/fragments checks. Built image references contain only the six edited kitchen/bathroom sources and the existing interior/exterior sources.

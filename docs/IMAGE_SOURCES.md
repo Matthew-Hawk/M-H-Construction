@@ -1,17 +1,17 @@
 # Website photography
 
-Updated November 6, 2026. Owner-supplied photographs selected from the neighboring mh-site/Work Portfolio folder. All 315 photographs were reviewed as contact sheets across Kitchen, Bathrrom, Interior, and Exterior. Videos are not used. Originals remain unchanged.
+Updated November 7, 2026. Owner-supplied photographs selected from the neighboring mh-site/Work Portfolio folder. The initial selection reviewed 315 photographs across Kitchen, Bathrrom, Interior, and Exterior. Kitchen and bathroom selections now use all six owner-edited photographs in Edited_Kitchen and Edited_Bathroom. Videos are not used. Originals remain unchanged.
 
-Selected copies are auto-oriented, resized to fit within 1920 × 1920 without enlargement, converted to WebP, and stripped of source metadata. Astro generates responsive image sizes for delivery. No content was generated or retouched.
+Selected copies are auto-oriented, resized to fit within 1920 × 1920 without enlargement, converted to WebP, and stripped of source metadata. Astro generates responsive image sizes for delivery. The supplied edits are preserved; no additional retouching was applied.
 
 | Website asset | Original source within Work Portfolio |
 | --- | --- |
-| kitchen-island.webp | Kitchen/20190313_090036.jpg |
-| kitchen-wood-cabinets.webp | Kitchen/20181024_162344.jpg |
-| kitchen-green-island.webp | Kitchen/20251103_105417.jpg |
-| bathroom-tub.webp | Bathrrom/20171206_163236.jpg |
-| bathroom-shower.webp | Bathrrom/20230920_154516.jpg |
-| bathroom-vanity.webp | Bathrrom/20251028_113433.jpg |
+| edited-kitchen-island.webp | Edited_Kitchen/kitchen edit.jpg |
+| edited-kitchen-white-cabinets.webp | Edited_Kitchen/20171121_145710.jpg.jpg |
+| edited-kitchen-green-cabinets.webp | Edited_Kitchen/20180621_092812.jpg |
+| edited-bathroom-blue.webp | Edited_Bathroom/20240804_175112.jpg |
+| edited-bathroom-shiplap.webp | Edited_Bathroom/20170803_162526.jpg |
+| edited-bathroom-shower.webp | Edited_Bathroom/FB_IMG_1449344810457.jpg |
 | interior-fireplace.webp | Interior/20231219_151254.jpg |
 | interior-staircase.webp | Interior/20190529_154226.jpg |
 | interior-living-room.webp | Interior/20251028_113623.jpg |

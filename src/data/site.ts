@@ -12,8 +12,8 @@ export const business = {
 export const services = [
   {
     slug: 'kitchen-remodeling', name: 'Kitchen Remodeling', short: 'Kitchens',
-    ...portfolio['kitchen-island'],
-    photos: [portfolio['kitchen-wood-cabinets'], portfolio['kitchen-green-island']],
+    ...portfolio['edited-kitchen-island'],
+    photos: [portfolio['edited-kitchen-white-cabinets'], portfolio['edited-kitchen-green-cabinets']],
     headline: 'The heart of your home. Reimagined.',
     description: 'A place to gather, cook, and make everyday memories. Let’s explore a kitchen that feels right for the way you live.',
     intro: 'A kitchen remodel starts with how you use your home. Whether you have a clear vision or are still gathering ideas, we can discuss your priorities and the right approach for your space.',
@@ -27,8 +27,8 @@ export const services = [
   },
   {
     slug: 'bathroom-remodeling', name: 'Bathroom Remodeling', short: 'Bathrooms',
-    ...portfolio['bathroom-tub'],
-    photos: [portfolio['bathroom-shower'], portfolio['bathroom-vanity']],
+    ...portfolio['edited-bathroom-blue'],
+    photos: [portfolio['edited-bathroom-shiplap'], portfolio['edited-bathroom-shower']],
     headline: 'A better beginning. A quieter end.',
     description: 'Thoughtful spaces for daily routines. Start a conversation about a bathroom that balances comfort, character, and function.',
     intro: 'Your bathroom should work for your daily routine. Share what you would like to improve, from the feel of the space to the way you use it, and we can discuss a remodeling approach tailored to your goals.',
