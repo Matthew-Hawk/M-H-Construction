@@ -26,3 +26,7 @@ The former generated kitchen and bathroom concepts are no longer referenced by t
 ## Logos
 
 Owner-supplied SVG files in public/images/brand. Originals remain unchanged.
+
+## Homepage hero — November 7, 2026
+
+Owner-supplied `Edited_Kitchen/Hero.png` is used only for the homepage hero, via the optimized `src/assets/home-hero.webp` copy. The supplied appearance is preserved without additional retouching. Its caption identifies M&H Construction without attributing the image to a completed project. Kitchen/bathroom portfolio selections and all other photography remain unchanged.

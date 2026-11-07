@@ -8,11 +8,12 @@ import ArticleCard from '../components/ArticleCard.astro';
 import ProjectStory from '../components/ProjectStory.astro';
 import { articles } from '../data/journal';
 import { services, process, homeFAQs } from '../data/site';
+import homeHero from '../assets/home-hero.webp';
 ---
 <BaseLayout title="Kitchen & Bathroom Remodeling in Bryan–College Station" description="Discuss your kitchen or bathroom remodel with M&H Construction. Serving Bryan, College Station, and Brazos County with a personal approach.">
   <section class="hero container">
     <div class="hero-copy"><p class="eyebrow">M&amp;H CONSTRUCTION · BRYAN–COLLEGE STATION</p><h1>Beautiful spaces.<br /><em>Built around you.</em></h1><p class="hero-description">Kitchen &amp; bathroom remodeling in Bryan–College Station. Thoughtful planning, personal service, and a home that feels like yours.</p><div class="hero-actions"><a class="button" href="/contact/">Discuss Your Project <Arrow /></a><a class="text-link" href="#services">Explore Our Services <Arrow direction="down" /></a></div></div>
-    <div class="hero-image-wrap"><ProjectImage src={services[0].image} alt={services[0].alt} class="hero-image" eager /><div class="hero-note"><span>KITCHENS &amp; BATHROOMS</span><span>Made for everyday living.</span></div></div>
+    <div class="hero-image-wrap"><ProjectImage src={homeHero} alt="Kitchen with white cabinetry, a navy island, brass fixtures, and glass pendant lights opening onto a living room" caption="M&amp;H Construction" class="hero-image" eager /><div class="hero-note"><span>KITCHENS &amp; BATHROOMS</span><span>Made for everyday living.</span></div></div>
   </section>
   <div class="principles container"><span>Thoughtful craftsmanship</span><span>A personal approach</span><span>Rooted in Brazos County</span></div>
   <section class="section container" id="services">
