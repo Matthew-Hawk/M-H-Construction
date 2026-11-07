@@ -54,3 +54,11 @@ Screenshot: `qa/homepage-desktop.jpg` (local, ignored development artifact).
 - Browser checks: desktop 1440px, header breakpoint 1121px, mobile 390px, and narrow 320px. No horizontal overflow on Home, About, Our Work, Journal, an article, or Contact at 320px. Menu Escape restores focus; Journal Bathroom filter shows one guide.
 - At 390×844, contact form starts around 581px (previously 899px); homepage services heading around 1005px (previously 1048px). At 1440×900, Journal library starts around 933px (previously 1110px). Measurements include the design-preview banner and browser scrollbar.
 - Screenshots: qa/design-portfolio-desktop.png and qa/design-about-desktop.png. Changes are local; hosted Cloudflare preview has not been redeployed.
+
+## Owner portfolio photography — November 6, 2026
+
+- Reviewed 315 owner-supplied photographs across four job categories. Selected 12 finished-work photographs and preserved all source originals.
+- Replaced generated kitchen and bathroom images across Home, service pages, Our Work, and Journal. Our Work also includes interior and exterior galleries.
+- Replaced generated-image captions, banner wording, and portfolio descriptions with accurate photography labels. Category selections do not imply one project or a before/after pairing.
+- Astro diagnostics: 25 files, zero errors, warnings, or hints. Static build: 14 routes. Built links, assets, fragments, unique IDs, and H1 counts passed.
+- Browser preview could not connect to the local server from the browser tool; visual browser QA was unavailable. Source photography and contact sheets were inspected directly.

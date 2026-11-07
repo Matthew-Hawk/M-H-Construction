@@ -1,5 +1,4 @@
-import kitchen from '../assets/kitchen-concept.png';
-import bathroom from '../assets/bathroom-concept.png';
+import { portfolio } from './portfolio';
 
 export const business = {
   name: 'M&H Construction',
@@ -12,8 +11,9 @@ export const business = {
 
 export const services = [
   {
-    slug: 'kitchen-remodeling', name: 'Kitchen Remodeling', short: 'Kitchens', image: kitchen,
-    alt: 'AI-generated kitchen concept with ivory cabinetry, a white oak island, and brass pendants; not an M&H project',
+    slug: 'kitchen-remodeling', name: 'Kitchen Remodeling', short: 'Kitchens',
+    ...portfolio['kitchen-island'],
+    photos: [portfolio['kitchen-wood-cabinets'], portfolio['kitchen-green-island']],
     headline: 'The heart of your home. Reimagined.',
     description: 'A place to gather, cook, and make everyday memories. Let’s explore a kitchen that feels right for the way you live.',
     intro: 'A kitchen remodel starts with how you use your home. Whether you have a clear vision or are still gathering ideas, we can discuss your priorities and the right approach for your space.',
@@ -26,8 +26,9 @@ export const services = [
     priorities: ['How you cook & gather', 'Layout & everyday flow', 'Materials & finishes'],
   },
   {
-    slug: 'bathroom-remodeling', name: 'Bathroom Remodeling', short: 'Bathrooms', image: bathroom,
-    alt: 'AI-generated bathroom concept with an oak vanity, arched mirrors, and a glass shower; not an M&H project',
+    slug: 'bathroom-remodeling', name: 'Bathroom Remodeling', short: 'Bathrooms',
+    ...portfolio['bathroom-tub'],
+    photos: [portfolio['bathroom-shower'], portfolio['bathroom-vanity']],
     headline: 'A better beginning. A quieter end.',
     description: 'Thoughtful spaces for daily routines. Start a conversation about a bathroom that balances comfort, character, and function.',
     intro: 'Your bathroom should work for your daily routine. Share what you would like to improve, from the feel of the space to the way you use it, and we can discuss a remodeling approach tailored to your goals.',

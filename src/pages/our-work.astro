@@ -3,9 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectStory from '../components/ProjectStory.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 import { services } from '../data/site';
+import { additionalWork } from '../data/portfolio';
+import ProjectImage from '../components/ProjectImage.astro';
 ---
-<BaseLayout title="Our Work — Portfolio Preview" description="The M&H portfolio is being prepared. This design preview uses clearly labeled generated concepts, not completed M&H projects.">
-  <section class="container page-intro"><p class="eyebrow">OUR WORK · PORTFOLIO IN PREPARATION</p><h1>Spaces with a story.<br /><em>Details with a purpose.</em></h1><p class="intro-text">Explore the layout for our future project stories. These generated concepts illustrate the website’s visual direction; they are not completed M&amp;H projects.</p></section>
-  <section class="container project-stories" aria-label="Illustrative kitchen and bathroom concepts">{services.map(service => <ProjectStory service={service} />)}</section>
+<BaseLayout title="Our Work — Project Portfolio" description="Explore M&H Construction project photographs, including kitchens, bathrooms, interiors, decks, and exterior work.">
+  <section class="container page-intro"><p class="eyebrow">OUR WORK · PROJECT PORTFOLIO</p><h1>Spaces with a story.<br /><em>Details with a purpose.</em></h1><p class="intro-text">Explore a selection of our work, from kitchens and bathrooms to interior details and outdoor spaces.</p></section>
+  <section class="container project-stories" aria-label="Kitchen and bathroom project photographs">{services.map(service => <ProjectStory service={service} />)}</section>
+  {additionalWork.map(category => <section class="container section portfolio-category" aria-label={`${category.name} project photographs`}><div class="section-heading"><div><p class="eyebrow">MORE FROM OUR PORTFOLIO</p><h2>{category.name}.</h2></div></div><div class="portfolio-photo-grid">{category.photos.map(photo => <div><ProjectImage src={photo.image} alt={photo.alt} sizes="(max-width: 720px) 100vw, 33vw" /><p class="portfolio-photo-description">{photo.alt}</p></div>)}</div></section>)}
   <ContactCTA />
 </BaseLayout>

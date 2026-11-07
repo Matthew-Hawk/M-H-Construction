@@ -1,19 +1,28 @@
-# Preview image sources
+# Website photography
 
-Both images were generated with the built-in image generation tool on October 11, 2026, at the owner's request. They are design placeholders, not real M&H work. All rendered instances are visibly labeled. No before/after pairs, client attribution, locations, or project facts are attached.
+Updated November 6, 2026. Owner-supplied photographs selected from the neighboring mh-site/Work Portfolio folder. All 315 photographs were reviewed as contact sheets across Kitchen, Bathrrom, Interior, and Exterior. Videos are not used. Originals remain unchanged.
 
-## Kitchen
+Selected copies are auto-oriented, resized to fit within 1920 × 1920 without enlargement, converted to WebP, and stripped of source metadata. Astro generates responsive image sizes for delivery. No content was generated or retouched.
 
-Workspace file: `src/assets/kitchen-concept.png`.
+| Website asset | Original source within Work Portfolio |
+| --- | --- |
+| kitchen-island.webp | Kitchen/20190313_090036.jpg |
+| kitchen-wood-cabinets.webp | Kitchen/20181024_162344.jpg |
+| kitchen-green-island.webp | Kitchen/20251103_105417.jpg |
+| bathroom-tub.webp | Bathrrom/20171206_163236.jpg |
+| bathroom-shower.webp | Bathrrom/20230920_154516.jpg |
+| bathroom-vanity.webp | Bathrrom/20251028_113433.jpg |
+| interior-fireplace.webp | Interior/20231219_151254.jpg |
+| interior-staircase.webp | Interior/20190529_154226.jpg |
+| interior-living-room.webp | Interior/20251028_113623.jpg |
+| exterior-pergola.webp | Exterior/20201120_172526.jpg |
+| exterior-deck.webp | Exterior/20211021_085814.jpg |
+| exterior-greenhouse.webp | Exterior/20160707_141429.jpg |
 
-Prompt: Use case: photorealistic-natural. Asset type: wide website hero placeholder photograph for a kitchen remodeling company. Generate one photorealistic architectural interior photograph of a welcoming premium Texas home kitchen: warm ivory shaker cabinets, natural white oak island, cream quartz counters with subtle veining, aged brass hardware, two elegant pendant lights, large windows with soft morning light, restrained styling with a ceramic bowl and a small leafy branch. Wide landscape framing, eye-level editorial interior photography with straight vertical lines and realistic construction details, generous view of the island and cabinetry. Warm natural materials and quiet elegance, approachable rather than extravagant. No people, no text, no logos, no watermark, no collage. This is illustrative AI-generated concept imagery, not evidence of an actual contractor project.
+Kitchen and bathroom sections show category selections across multiple projects, not a single documented project or before/after sequence. Captions describe visible details only; client names, locations, cost, scope, and completion dates are not inferred.
 
-## Bathroom
-
-Workspace file: `src/assets/bathroom-concept.png`.
-
-Prompt: Use case: photorealistic-natural. Asset type: landscape remodeling website placeholder photograph. Generate one photorealistic architectural interior photograph of a warm sophisticated bathroom in an approachable premium Texas home. Natural light, white oak double vanity with ivory quartz top, brushed brass fixtures, two simple arched mirrors, soft cream limestone-look tile, walk-in glass shower visible beside vanity with a tidy recessed niche, white folded towels and restrained ceramic accents. Quiet warm architectural elegance, plausible practical renovation, straight vertical lines and realistic materials. Landscape 3:2 composition, eye-level professional editorial interior photography. No people, no logos, no text, no watermark, no collage. This is illustrative AI-generated concept imagery, not an actual contractor project.
+The former generated kitchen and bathroom concepts are no longer referenced by the website. The About page retains its separate team portrait placeholder because no team portrait was provided.
 
 ## Logos
 
-Owner-supplied SVG files copied from `C:/Users/matth/OneDrive/Desktop/Dads Stuff/LOGO/Horizontal Logo`. Blue uses #000A27. Originals remain unchanged.
+Owner-supplied SVG files in public/images/brand. Originals remain unchanged.
