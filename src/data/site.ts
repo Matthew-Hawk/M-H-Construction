@@ -13,6 +13,7 @@ export const services = [
   {
     slug: 'kitchen-remodeling', name: 'Kitchen Remodeling', short: 'Kitchens',
     ...portfolio['edited-kitchen-island'],
+    portfolioHero: portfolio['edited-kitchen-green-cabinets'],
     photos: [portfolio['edited-kitchen-white-cabinets'], portfolio['edited-kitchen-green-cabinets']],
     headline: 'The heart of your home. Reimagined.',
     description: 'A place to gather, cook, and make everyday memories. Let’s explore a kitchen that feels right for the way you live.',
@@ -28,6 +29,7 @@ export const services = [
   {
     slug: 'bathroom-remodeling', name: 'Bathroom Remodeling', short: 'Bathrooms',
     ...portfolio['edited-bathroom-blue'],
+    portfolioHero: portfolio['edited-bathroom-shiplap'],
     photos: [portfolio['edited-bathroom-shiplap'], portfolio['edited-bathroom-shower']],
     headline: 'A better beginning. A quieter end.',
     description: 'Thoughtful spaces for daily routines. Start a conversation about a bathroom that balances comfort, character, and function.',

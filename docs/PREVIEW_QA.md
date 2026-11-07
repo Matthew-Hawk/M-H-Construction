@@ -68,3 +68,10 @@ Screenshot: `qa/homepage-desktop.jpg` (local, ignored development artifact).
 - Replaced every kitchen and bathroom photograph with the six supplied images from Edited_Kitchen and Edited_Bathroom. Updated descriptive text to match the new photographs.
 - All six interior/exterior image files and their gallery selections remain unchanged. Source originals remain untouched.
 - Astro diagnostics: zero errors, warnings, or hints. All 14 routes build and pass local links/assets/fragments checks. Built image references contain only the six edited kitchen/bathroom sources and the existing interior/exterior sources.
+
+## Edited interiors/exteriors and separate portfolio heroes — November 7, 2026
+
+- Replaced all six interior/exterior photographs with the supplied Edited_Interior and Edited_Exterior versions. Updated source records and the fireplace/deck captions to match.
+- Kitchen service and full portfolio lead with the green-cabinet kitchen; bathroom service and full portfolio lead with the shiplap bathroom. All three existing kitchen/bathroom photos remain in each full portfolio section, without duplicates.
+- Homepage hero, service highlights, and compact kitchen feature retain their prior image selections.
+- Astro diagnostics and the 14-page build pass. Local links/assets/fragments pass. Built HTML confirms all 12 portfolio photos use edited sources and the portfolio/service heroes differ from the homepage highlights.
